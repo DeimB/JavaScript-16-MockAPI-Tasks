@@ -19,6 +19,15 @@ header {
   gap: 5rem;
 }
 
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.marked-text {
+  color: rgb(252, 165, 0);
+}
+
 nav ul {
   display: flex;
   align-items: center;
@@ -39,92 +48,70 @@ nav ul li a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.marked-text {
-  color: rgb(252, 165, 0);
-}
-
-.heading {
-  background-image: url("./images/main-heading-image.jpg");
-  background-size: cover;
-  background-position: bottom;
-  border-radius: 1rem;
-  padding: 10rem 2rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.insert-wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.heading h1 {
-  /* color: white; */
-  font-size: 3rem;
-  text-align: center;
-}
-
-.recipes {
+.insert-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding-top: 1rem;
-}
-
-#recipes-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
   gap: 2rem;
-}
-
-.card {
+  padding: 4rem 4rem;
+  width: 50%;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  justify-content: space-between;
   background-color: white;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  text-decoration: none;
-  color: black;
 }
 
-.card img {
+.form {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* .card-text-wrapper {
-  padding: 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  gap: 1rem;
-} */
-
-.card-heading-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
-  padding: 2rem 2rem;
 }
 
-.card-button {
+.title {
+  text-align: center;
+}
+
+.form input {
+  padding: 0.3rem 0.6rem;
+}
+
+#submit-btn {
   padding: 0.8rem 2rem;
   border: none;
+  align-self: center;
   background-color: black;
   color: white;
+  border-radius: 2rem;
   cursor: pointer;
 }
-.card-button:hover {
+
+#submit-btn:hover {
   background-color: rgb(252, 165, 0);
   color: black;
 }
 
+.success {
+  color: green;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.danger {
+  color: brown;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 @media (max-width: 768px) {
-  #recipes-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .insert-card {
+    width: 100%;
   }
 }

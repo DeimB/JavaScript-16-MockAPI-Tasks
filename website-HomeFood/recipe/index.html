@@ -10,22 +10,20 @@
     <div class="page-wrapper">
       <main>
         <header>
-          <h3 class="logo">Home<span class="marked-text">Food</span></h3>
+          <a href="../index.html"
+            ><h3 class="logo">Home<span class="marked-text">Food</span></h3></a
+          >
           <nav>
             <ul>
-              <li><a href="./insert/index.html">Insert recipe</a></li>
+              <li><a href="../insert/index.html">Insert recipe</a></li>
             </ul>
           </nav>
         </header>
-        <div class="heading">
-          <div class="title">
-            <h1>Explore Delicious</h1>
-            <h1 class="marked-text">Recipes</h1>
-          </div>
-        </div>
-        <div class="recipes">
-          <h2>Recipes</h2>
-          <div id="recipes-wrapper"></div>
+
+        <div class="recipe">
+          <div id="recipe-wrapper"></div>
+          <button id="delete-btn">Delete</button>
+          <p class="success" id="succcess-message"></p>
         </div>
       </main>
     </div>

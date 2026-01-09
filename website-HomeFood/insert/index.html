@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <main>
+        <header>
+          <a href="../index.html"
+            ><h3 class="logo">Home<span class="marked-text">Food</span></h3></a
+          >
+          <nav>
+            <ul>
+              <li><a href="./index.html">Insert recipe</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="insert-wrapper">
+          <div class="insert-card">
+            <h2 class="title">
+              Insert <span class="marked-text">recipe</span>
+            </h2>
+            <div class="form">
+              <input type="text" placeholder="title" id="title" />
+              <input type="text" placeholder="description" id="description" />
+              <input type="text" placeholder="instructions" id="instructions" />
+              <input type="text" placeholder="ingredients" id="ingredients" />
+              <input type="text" placeholder="img url" id="img-url" />
+              <button id="submit-btn">Submit</button>
+              <p class="danger" id="error-message"></p>
+              <p class="success" id="succcess-message"></p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script defer src="./script.js"></script>
+  </body>
+</html>
