@@ -1,3 +1,5 @@
+import { insertNewRecipe } from "../utils/fetch.js";
+
 const sumbitBtn = document.getElementById("submit-btn");
 const successWrapper = document.getElementById("succcess-message");
 const errorWrapper = document.getElementById("error-message");
@@ -33,15 +35,7 @@ sumbitBtn.addEventListener("click", async () => {
 
   console.log(recipe);
 
-  const response = await fetch(
-    `https://695e10332556fd22f6772f85.mockapi.io/recipes`,
-    {
-      method: "POST",
-      body: JSON.stringify(recipe),
-      headers: { "Content-Type": "application/json" },
-    }
-  );
-  const recipeRes = await response.json();
+  const recipeRes = await insertNewRecipe(recipe);
 
   if (recipeRes) {
     successWrapper.innerText = "New recipe is inserted!";
